@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Cuidar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="logo-semfundo.png" alt="logo marca doce cuidar">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="serviços.html">Serviços</a></li>
+                <li><a href="babas.html">Babás</a></li>
+                <li><a href="solicitar.html">Solicitar</a></li>
+                <li><a href="contato.html">Torne-se uma de nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- Informações de Contato -->
+<section class="contato-info container">
+  <center><h2>Entre em Contato</h2></center>
+
+  <div class="contato-cards">
+    <div class="contato-card">
+      <h3>Telefone</h3>
+      <p class="contato-dado">(11) 3000-1234</p>
+      <p class="contato-pequeno">Seg-Sex: 8h às 20h</p>
+    </div>
+
+    <div class="contato-card">
+      <h3>Email</h3>
+      <p class="contato-dado">contato@docecuidar.com.br</p>
+      <p class="contato-pequeno">Resposta em até 24 horas</p>
+    </div>
+
+    <div class="contato-card">
+      <h3>Horário</h3>
+      <p class="contato-dado">Segunda a Sexta</p>
+      <p class="contato-pequeno">8:00 - 20:00</p>
+    </div>
+  </div>
+</section>
+
+<!-- Formulário de Contato -->
+<section class="formulario-section container">
+  <h2>Envie sua Mensagem</h2>
+
+  <form id="form-contato" class="formulario">
+    <div class="form-group">
+      <label for="nome-contato">Nome Completo *</label>
+      <input type="text" id="nome-contato" name="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email-contato">Email *</label>
+      <input type="email" id="email-contato" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="assunto">Assunto *</label>
+      <input type="text" id="assunto" name="assunto" required>
+    </div>
+
+    <div class="form-group">
+      <label for="mensagem">Mensagem *</label>
+      <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+  </form>
+
+  <div id="mensagem-sucesso-contato" class="mensagem-sucesso" hidden>
+    ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
+  </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-coluna">
+                <h4>Doce Cuidar</h4>
+                <p>Serviço confiável de babás para crianças em toda região.</p>
+            </div>
+            <div class="footer-coluna">
+                <h4>Links Rápidos</h4>
+                <p><a href="index.html">Início</a></p>
+                <p><a href="servicos.html">Serviços</a></p>
+                <p><a href="babas.html">Babás</a></p>
+            </div>
+            <div class="footer-coluna">
+                <h4>Contato</h4>
+                <p>📞 (11) 3000-1234</p>
+                <p>📧 contato@docecuidar.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Doce Cuidar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("form-contato");
+        const mensagem = document.getElementById("mensagem-sucesso-contato");
+
+        if (form) {
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Validate required fields
+            const obrigatorios = form.querySelectorAll("input[required], textarea[required]");
+            let valido = true;
+
+            obrigatorios.forEach(campo => {
+              const valor = (campo.value || "").toString().trim();
+              if (!valor) {
+                campo.style.border = "2px solid #e74c3c";
+                valido = false;
+              } else {
+                campo.style.border = "";
+              }
+            });
+
+            if (!valido) {
+              alert("Por favor, preencha todos os campos obrigatórios corretamente.");
+              return;
+            }
+
+            alert("✓ Mensagem enviada com sucesso! Entraremos em contato em breve.");
+
+            // Show success message
+            if (mensagem) {
+              mensagem.hidden = false;
+            }
+
+            // Clear form
+            form.reset();
+
+            // Hide success message after 5 seconds
+            if (mensagem) {
+              setTimeout(() => {
+                mensagem.hidden = true;
+              }, 5000);
+            }
+          });
+        }
+      });
+    </script>
+</body>
+</html>

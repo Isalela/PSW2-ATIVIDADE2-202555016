@@ -1,0 +1,1077 @@
+/* ------ NAVBAR ------ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f7f7;
+  padding: 2px 2px;
+  border-bottom: 3px solid #ffc7e3;
+  box-shadow: 0 6px 15px rgba(255, 182, 217, 0.35);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 180px; /* ajuste se a logo for maior */
+  margin: 0;
+}
+
+/* Logo link styling - removes default link styles */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.02);
+}
+
+/* Logo */
+.logo {
+  height: 140px;
+}
+
+/* Navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600; /*grossura da fonte*/
+  color: #ff4f94;
+  font-size: 21px;
+  transition: 0.3s;
+  padding: 20px 18px;
+  border-radius: 14px;
+}
+
+.nav-links a:hover {
+  background-color: #ff4f94;
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(255, 79, 148, 0.5);
+}
+
+/* ------ BANNER ------ */
+article {
+  background: linear-gradient(135deg, #ff4f94, #ff82bd);
+  color: white;
+  padding: 90px 30px;
+  text-align: center;
+  border-radius: 28px;
+  width: 85%;
+  margin: 40px auto 60px auto;
+  box-shadow: 0 8px 32px rgba(255, 79, 148, 0.35);
+}
+
+article h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+article p {
+  font-size: 22px;
+  margin-bottom: 28px;
+}
+
+/* Button styling - improved responsiveness */
+.btn {
+  display: inline-block;
+  background-color: white;
+  color: #ff4f94;
+  padding: 15px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.4);
+  transition: 0.3s ease;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffe6f2;
+  transform: scale(1.07);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ------ SERVIÇOS ------ */
+.servicos {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.servicos h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #c85a7c;
+  font-weight: 800;
+}
+
+.servicos-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.servico-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(200, 90, 124, 0.12);
+  flex: 1;
+  min-width: 280px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 5px solid #e7b3d7;
+}
+
+.servico-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(200, 90, 124, 0.2);
+}
+
+.servico-icon {
+  font-size: 3.3rem;
+  margin-bottom: 1rem;
+}
+
+.servico-card h3 {
+  color: #c44873;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.servico-card p {
+  color: #6f4456;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Centraliza botão caso adicione depois */
+.servicos-botao {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/*Como Funciona*/
+.como-funciona {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.como-funciona h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.passos-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.passo {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(200, 90, 124, 0.08);
+  flex: 1;
+  min-width: 240px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid #d4a5c8;
+}
+
+.passo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(200, 90, 124, 0.15);
+}
+
+.passo-numero {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #c85a7c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1rem;
+}
+
+.passo h4 {
+  font-size: 1.2rem;
+  color: #c85a7c;
+  margin-bottom: 0.5rem;
+}
+
+.passo p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/*babas em destaque*/
+
+/* Babás */
+.babas {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.babas h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.babas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.baba-card {
+  background: #fff;
+  border: 2px solid #f5d5e0;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(200, 90, 124, 0.08);
+  text-align: center;
+  flex: 1;
+  max-width: 280px;
+  min-width: 280px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.baba-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(200, 90, 124, 0.15);
+  border-color: #d4a5c8;
+}
+
+.baba-foto {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.baba-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem NUNCA deforma */
+  border-radius: 50%;
+}
+
+.baba-card h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+.especializacao {
+  font-size: .9rem;
+  font-weight: 600;
+  color: #c85a7c;
+  padding: .5rem 1rem;
+}
+
+.avaliacao {
+  font-weight: bold;
+  color: #d4a5c8;
+  padding: .5rem 1rem;
+}
+
+.experiencia {
+  font-size: .85rem;
+  color: #7f8c8d;
+  padding: 0 1rem 1.5rem;
+}
+
+.baba-card button {
+  margin: 0 1rem 1rem;
+}
+
+/* Botão principal rosa */
+.btn-primary {
+  display: inline-block;
+  background: #ff4f94; /* rosa principal */
+  color: #fff;
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(255, 79, 148, 0.4);
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: #ff79b6; /* rosa claro no hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 79, 148, 0.5);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Botão secundário dentro dos cards */
+.btn-secondary {
+  background: #ffe6f2;
+  color: #ff4f94;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background: #ffcae4;
+  transform: scale(1.04);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Centralização */
+.center-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ------ FOOTER ------ */
+.footer {
+  background: linear-gradient(135deg, #ff4f94, #ff82bd);
+  color: white;
+  padding: 4rem 2rem 2rem;
+  margin-top: 5rem;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: 0 -6px 20px rgba(255, 79, 148, 0.25);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-coluna {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-coluna h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.footer-coluna h4::after {
+  content: "";
+  width: 45px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  opacity: 0.8;
+}
+
+.footer-coluna p {
+  font-size: 1rem;
+  margin: 0.6rem 0;
+  opacity: 0.95;
+}
+
+.footer-coluna a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-coluna a:hover {
+  color: #ffe6f2;
+  padding-left: 6px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  opacity: 0.9;
+}
+
+.footer-bottom p {
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Seção de Serviços */
+.servicos {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.servicos h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+}
+
+/* Container dos cards */
+.servicos-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card individual */
+.servico-card {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 280px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 3px 12px rgba(200, 90, 124, 0.08);
+  border: 2px solid #f5d5e0;
+  transition: 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(200, 90, 124, 0.15);
+  border-color: #d4a5c8;
+}
+
+/* Ícone */
+.servico-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Título */
+.servico-card h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+.servico-card p {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+}
+
+/* Preço */
+.servico-preco {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: #c85a7c;
+  font-size: 0.95rem;
+}
+
+/* CTA inferior */
+.cta-servicos {
+  background-color: #fdf0f5;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+}
+
+.cta-servicos h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.cta-servicos p {
+  margin: 1rem 0 2rem;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+/* Seção */
+.secao-tabela {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.secao-tabela h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+/* Container para responsividade */
+.tabela-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(200, 90, 124, 0.08);
+}
+
+/* Tabela */
+.tabela-babas {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 700px;
+}
+
+/* Cabeçalho */
+.tabela-babas thead {
+  background: #fbe3ed;
+}
+
+.tabela-babas th {
+  padding: 1rem;
+  color: #c85a7c;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px solid #f2c9d9;
+}
+
+/* Linhas */
+.tabela-babas td {
+  padding: 1rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #f3d8e3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* make action column responsive */
+.tabela-babas td:last-child {
+  white-space: normal;
+}
+
+/* Botão */
+.btn-tabela {
+  padding: 0.5rem 1.2rem;
+  background: #e8b4c8;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-tabela:hover {
+  background: #c85a7c;
+  transform: translateY(-2px);
+}
+
+/* Formulário */
+.formulario-section {
+  background-color: #fdf0f5;
+  padding: 4rem 2rem;
+}
+
+.formulario-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(200, 90, 124, 0.08);
+  border-top: 4px solid #d4a5c8;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #f5d5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c85a7c;
+  box-shadow: 0 0 8px rgba(200, 90, 124, 0.2);
+}
+
+.formulario button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.mensagem-sucesso {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #d4f1e1;
+  color: #0f6f3a;
+  border: 1px solid #a8e6d0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contato-info {
+  margin: 4rem auto;
+}
+
+.contato-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.contato-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.contato-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  min-width: 260px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: .2s;
+}
+
+.contato-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.contato-card h3 {
+  color: #c85a7c;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contato-dado {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0.5rem 0;
+}
+
+.contato-pequeno {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0.5rem 0;
+}
+
+.perfil-container {
+  max-width: 900px;
+  margin: 4rem auto;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 182, 213, 0.5);
+}
+
+.perfil-container h1 {
+  text-align: center;
+  color: #c94e8a;
+  margin-bottom: 2rem;
+}
+
+/* --- Fotos --- */
+
+.fotos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.fotos-container img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(255, 150, 200, 0.4);
+}
+
+/* --- Texto --- */
+
+.perfil-info h2 {
+  margin-top: 2rem;
+  color: #d05791;
+}
+
+.perfil-info p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* --- Botão voltar --- */
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background: #f7a5cc;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-voltar:hover {
+  background: #d86aa5;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    padding: 15px 12px;
+  }
+
+  article h1 {
+    font-size: 36px;
+  }
+
+  article p {
+    font-size: 18px;
+  }
+
+  /* Responsive button sizing for tablets */
+  .btn {
+    padding: 12px 30px;
+    font-size: 18px;
+  }
+
+  .btn-primary {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+  .servicos h2,
+  .como-funciona h2,
+  .babas h2,
+  .contato-info h2,
+  .secao-tabela h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 140px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  article {
+    width: 90%;
+    padding: 50px 20px;
+    margin: 20px auto 40px auto;
+  }
+
+  article h1 {
+    font-size: 28px;
+  }
+
+  article p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* Responsive buttons for mobile - better touch targets */
+  .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    min-width: 200px;
+  }
+
+  .btn-primary {
+    padding: 12px 25px;
+    font-size: 16px;
+    width: auto;
+  }
+
+  .servicos,
+  .como-funciona,
+  .babas,
+  .secao-tabela {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .servicos h2,
+  .como-funciona h2,
+  .babas h2,
+  .contato-info h2,
+  .secao-tabela h2,
+  .formulario-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .servico-card,
+  .passo,
+  .baba-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  /* Footer mobile */
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .footer-content {
+    gap: 2rem;
+  }
+
+  .footer-coluna {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .footer-coluna h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .formulario {
+    padding: 1.5rem;
+  }
+
+  .formulario-section {
+    padding: 3rem 1rem;
+  }
+
+  .cta-servicos {
+    padding: 2rem 1rem;
+  }
+
+  .cta-servicos h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-servicos p {
+    font-size: 1rem;
+  }
+
+  .contato-card {
+    min-width: 100%;
+  }
+
+  .tabela-container::before {
+    content: "← Deslize para ver mais →";
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    background: #fff5f9;
+    color: #c85a7c;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .tabela-babas td {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .tabela-babas td:last-child {
+    white-space: normal;
+  }
+
+  .btn-tabela {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 160px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 8px 8px;
+  }
+
+  article {
+    width: 95%;
+    padding: 40px 15px;
+    border-radius: 20px;
+  }
+
+  article h1 {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  article p {
+    font-size: 14px;
+  }
+
+  /* Mobile button - full width for better UX */
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn-primary {
+    padding: 12px 20px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .servicos h2,
+  .como-funciona h2,
+  .babas h2,
+  .contato-info h2,
+  .secao-tabela h2,
+  .formulario-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn-secondary {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}

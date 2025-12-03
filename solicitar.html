@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Cuidar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="logo-semfundo.png" alt="logo marca doce cuidar">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="serviços.html">Serviços</a></li>
+                <li><a href="babas.html">Babás</a></li>
+                <li><a href="solicitar.html">Solicitar</a></li>
+                <li><a href="contato.html">Torne-se uma de nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <!-- Formulário -->
+<section class="formulario-section">
+    <h2>Solicitar Serviço de Babá</h2>
+    
+    <form id="form-solicitar" class="formulario">
+        
+        <div class="form-group">
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefone">Telefone *</label>
+            <input type="tel" id="telefone" name="telefone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cidade">Cidade/Região *</label>
+            <input type="text" id="cidade" name="cidade" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tipo-servico">Tipo de Serviço *</label>
+            <select id="tipo-servico" name="tipo-servico" required>
+                <option value="">Selecione...</option>
+                <option value="crianca-pequena">Cuidado Infantil (0-5 anos)</option>
+                <option value="crianca-grande">Cuidado Infantil (5-12 anos)</option>
+                <option value="noturno">Serviço Noturno</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="data">Data Desejada *</label>
+            <input type="date" id="data" name="data" required>
+        </div>
+
+        <div class="form-group">
+            <label for="horario">Horário de Início *</label>
+            <input type="time" id="horario" name="horario" required>
+        </div>
+
+        <div class="form-group">
+            <label for="duracao">Duração do Serviço (horas) *</label>
+            <input type="number" id="duracao" name="duracao" min="1" max="24" required>
+        </div>
+
+        <div class="form-group">
+            <label for="detalhes">Detalhes Adicionais</label>
+            <textarea id="detalhes" name="detalhes" rows="4" placeholder="Alergias, comportamentos, cuidados especiais..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Enviar Solicitação</button>
+    </form>
+
+    <div id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">
+        ✓ Solicitação enviada com sucesso! Entraremos em contato em breve.
+    </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("form-solicitar");
+  const mensagem = document.getElementById("mensagem-sucesso");
+  const telefone = document.getElementById("telefone");
+
+  if (!form) {
+    console.error("Form não encontrado: verifique id='form-solicitar'");
+    return;
+  }
+
+  // Allow only numbers in phone field
+  if (telefone) {
+    telefone.addEventListener("input", function () {
+      const val = this.value;
+      const novo = (val[0] === "+")
+        ? "+" + val.slice(1).replace(/\D/g, "")
+        : val.replace(/\D/g, "");
+      this.value = novo;
+    });
+  }
+
+  // Form submission listener
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Validate required fields
+    const obrigatorios = form.querySelectorAll("input[required], select[required], textarea[required]");
+    let valido = true;
+
+    obrigatorios.forEach(campo => {
+      const valor = (campo.value || "").toString().trim();
+
+      if (!valor) {
+        campo.style.border = "2px solid #e74c3c";
+        valido = false;
+      } else {
+        campo.style.border = "";
+      }
+    });
+
+    if (!valido) {
+      alert("Por favor, preencha todos os campos obrigatórios corretamente.");
+      const primeiro = form.querySelector("input[required]:invalid, select[required]:invalid, textarea[required]:invalid");
+      if (primeiro) primeiro.focus();
+      return;
+    }
+
+    alert("✓ Solicitação enviada com sucesso! Entraremos em contato em breve.");
+
+    // Show success message
+    if (mensagem) {
+      mensagem.style.display = "block";
+    }
+
+    // Clear form
+    form.reset();
+
+    // Hide success message after 5 seconds
+    if (mensagem) {
+      setTimeout(() => {
+        mensagem.style.display = "none";
+      }, 5000);
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
